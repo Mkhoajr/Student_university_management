@@ -1,4 +1,4 @@
-## Student university management project  
+## STUDENT UNIVERSITY MANAGEMENT PROJECT 
 
 A Java-based desktop application designed to help manage Student, Teacher, and academic information efficiently within a university environment.
 
@@ -20,7 +20,7 @@ _ Send and receive notifications/messages to All Teachers and Students
 
 _ The teacher has the schedule that the students have registered for the course  
 _ The teacher can grade all the students in the course  
-_ Student Grade management (GPA calculation and classification)  
+_ Student Grade Management (GPA calculation and classification)  
 _ Export the student's grade to an Excel file  
 _ Send/receive messages from the Admin  
 
@@ -75,6 +75,12 @@ _ Socket programming
 
 <figure>
   <img src="https://github.com/user-attachments/assets/8c616cf8-71a1-4d80-a4b6-1107610eb388" width="600" alt="Login Form" />
+</figure>  
+<figure>
+  <img src="https://github.com/user-attachments/assets/6a79c828-096d-43b9-9518-827d28772b9c" width="600" alt="Forget Pass Form" />
+</figure>  
+<figure>
+  <img src="https://github.com/user-attachments/assets/b5e471dd-a460-4ee9-8a47-769589888397" width="600" alt="Verify Pass Form" />
 </figure>  
 
 ### Admin UI
