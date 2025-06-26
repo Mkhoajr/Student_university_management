@@ -1,0 +1,242 @@
+/* adminnotification.css - Simple & Clean Styles */
+
+/* Main Container */
+.notification-form {
+    -fx-background-color: #f8f9fa;
+    -fx-background-radius: 10;
+    -fx-border-color: #dee2e6;
+    -fx-border-width: 1;
+    -fx-border-radius: 10;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 5, 0, 0, 2);
+}
+
+/* Panel Styling */
+.left-panel {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 8;
+    -fx-border-color: #e9ecef;
+    -fx-border-width: 1;
+    -fx-border-radius: 8;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.05), 3, 0, 0, 1);
+}
+
+.right-panel {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 8;
+    -fx-border-color: #e9ecef;
+    -fx-border-width: 1;
+    -fx-border-radius: 8;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.05), 3, 0, 0, 1);
+}
+
+/* Typography */
+.form-title {
+    -fx-text-fill: #2c3e50;
+    -fx-font-weight: bold;
+}
+
+.form-label {
+    -fx-text-fill: #495057;
+    -fx-font-weight: bold;
+}
+
+/* Form Controls */
+.form-combo {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #ced4da;
+    -fx-border-width: 1;
+    -fx-border-radius: 5;
+}
+
+.form-combo:focused {
+    -fx-border-color: #007bff;
+    -fx-border-width: 2;
+}
+
+.form-textfield {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #ced4da;
+    -fx-border-width: 1;
+    -fx-border-radius: 5;
+}
+
+.form-textfield:focused {
+    -fx-border-color: #007bff;
+    -fx-border-width: 2;
+}
+
+.form-textarea {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #ced4da;
+    -fx-border-width: 1;
+    -fx-border-radius: 5;
+}
+
+.form-textarea:focused {
+    -fx-border-color: #007bff;
+    -fx-border-width: 2;
+}
+
+/* Attachment */
+.attachment-info {
+    -fx-text-fill: #6c757d;
+    -fx-font-style: italic;
+}
+
+/* Buttons */
+.attach-button {
+    -fx-background-color: #6c757d;
+    -fx-text-fill: white;
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+.attach-button:hover {
+    -fx-background-color: #5a6268;
+}
+
+.send-button {
+    -fx-background-color: #28a745;
+    -fx-text-fill: white;
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+.send-button:hover {
+    -fx-background-color: #218838;
+}
+
+.cancel-button {
+    -fx-background-color: #c82333;
+    -fx-text-fill: white;
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+.cancel-button:hover {
+    -fx-background-color: #c82333;
+}
+
+.refresh-button {
+    -fx-background-color: #6c757d;
+    -fx-text-fill: white;
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+.refresh-button:hover {
+    -fx-background-color: #6c757d;
+}
+
+.view-details-button {
+    -fx-background-color: #6c757d;
+    -fx-text-fill: white;
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+.view-details-button:hover {
+    -fx-background-color: #6c757d;
+}
+
+.delete-button {
+    -fx-background-color: #c82333;
+    -fx-text-fill: white;
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+.delete-button:hover {
+    -fx-background-color: #c82333;
+}
+
+.clear-button {
+    -fx-background-color: #6c757d;
+    -fx-text-fill: white;
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+.clear-button:hover {
+    -fx-background-color: #6c757d;
+}
+
+/* History Components */
+.history-scroll {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #ced4da;
+    -fx-border-width: 1;
+    -fx-border-radius: 5;
+}
+
+.message-history-list {
+    -fx-background-color: #ffffff;
+    -fx-border-color: transparent;
+}
+
+.message-history-list .list-cell {
+    -fx-background-color: transparent;
+    -fx-border-color: #e9ecef;
+    -fx-border-width: 0 0 1 0;
+}
+
+.message-history-list .list-cell:selected {
+    -fx-background-color: #e3f2fd;
+    -fx-text-fill: #1976d2;
+}
+
+.message-history-list .list-cell:hover {
+    -fx-background-color: #f5f5f5;
+}
+
+/* Scrollbar Styling */
+.scroll-pane .scroll-bar:vertical {
+    -fx-background-color: #f8f9fa;
+    -fx-pref-width: 10;
+}
+
+.scroll-pane .scroll-bar:vertical .track {
+    -fx-background-color: #e9ecef;
+    -fx-background-radius: 5;
+}
+
+.scroll-pane .scroll-bar:vertical .thumb {
+    -fx-background-color: #ced4da;
+    -fx-background-radius: 5;
+}
+
+.scroll-pane .scroll-bar:vertical .thumb:hover {
+    -fx-background-color: #adb5bd;
+}
+
+/* Focus Effects */
+.form-combo:focused,
+.form-textfield:focused,
+.form-textarea:focused {
+    -fx-effect: dropshadow(three-pass-box, #007bff, 3, 0, 0, 0);
+}
+
+/* Button Press Effects */
+.attach-button:pressed,
+.send-button:pressed,
+.cancel-button:pressed,
+.refresh-button:pressed,
+.view-details-button:pressed,
+.delete-button:pressed,
+.clear-button:pressed {
+    -fx-effect: innershadow(three-pass-box, rgba(0,0,0,0.2), 2, 0, 0, 1);
+}

@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1100.0" stylesheets="@/tableviewStudent_style.css, @/style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.Student_management.controller.StudentController">
+   <children>
+      <BorderPane prefHeight="200.0" prefWidth="200.0">
+         <top>
+            <AnchorPane prefHeight="30.0" prefWidth="1100.0" style="-fx-background-color: #4682B4;" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="14.0" layoutY="2.0" text="Student Dashboard" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <!-- Logout Button -->
+                  <Button fx:id="logoutButton" layoutX="1001.0" mnemonicParsing="false" onAction="#handleLogout" prefHeight="29.0" prefWidth="120.0" style="-fx-background-color: #ff6666;" text="Logout" AnchorPane.bottomAnchor="1.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <graphic>
+                        <ImageView fitHeight="19.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/Icon-logout.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </top>
+         <left>
+            <AnchorPane prefHeight="565.0" prefWidth="230.0" style="-fx-background-color: #4682B4;" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane layoutX="15.0" layoutY="14.0" prefHeight="111.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="28.0" layoutY="69.0" text="Welcome, Student" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="55.0" fitWidth="60.0" layoutX="73.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/Icon-student.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  
+                  <!-- Course Registration Button -->
+                  <Button layoutX="25.0" layoutY="169.0" mnemonicParsing="false" onAction="#handleCourseRegistrationButton" prefHeight="40.0" prefWidth="180.0" text="Course Registration">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  
+                  <!-- Grade Course Button -->
+                  <Button layoutX="25.0" layoutY="232.0" mnemonicParsing="false" onAction="#handleCourseGradeButton" prefHeight="40.0" prefWidth="180.0" text="Course Grade">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  
+                  <!-- Notification Button -->
+                  <Button onAction="#handleReceiveNotification" layoutX="26.0" layoutY="302.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="180.0" text="Notification">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  
+                  
+                  <Line endX="100.0" layoutX="115.0" layoutY="125.0" startX="-100.0" stroke="#ffffffae" style="-fx-stroke-width: 3px;" />
+                  <Line endX="129.0" layoutX="101.0" layoutY="1.0" startX="-100.0" style="-fx-stroke-width: 2px;" />
+                  <ImageView fitHeight="19.0" fitWidth="20.0" layoutX="26.0" layoutY="180.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/Icon-course.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="19.0" fitWidth="20.0" layoutX="26.0" layoutY="243.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/Icon-CourseGrade.png" />
+                     </image>
+                  </ImageView>
+                  
+                  <ImageView fitHeight="19.0" fitWidth="20.0" layoutX="28.0" layoutY="313.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/Icon-notification.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </left>
+         <center>
+            <AnchorPane prefHeight="200.0" prefWidth="869.0" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane layoutX="14.0" layoutY="25.0" prefHeight="545.0" prefWidth="842.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="13.0" AnchorPane.topAnchor="25.0">
+                     <children>
+                     
+                        <!-- TableView for Available Courses (Course Registration) -->
+                        <TableView fx:id="studentCoursesTableView" layoutX="4.0" layoutY="57.0" prefHeight="278.0" prefWidth="837.0" visible="true" AnchorPane.bottomAnchor="76.0" AnchorPane.leftAnchor="4.0" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="57.0">
+                           <columns>
+                              <TableColumn fx:id="courseIDColumn" prefWidth="145.0" text="Course ID" />
+                              <TableColumn fx:id="courseSubjectNameColumn" prefWidth="150.0" text="Subject Name" />
+                              <TableColumn fx:id="courseTeacherColumn" prefWidth="140.0" text="Teacher" />
+                              <TableColumn fx:id="courseSemesterColumn" prefWidth="90.0" text="Semester" />
+                              <TableColumn fx:id="courseScheduleColumn" prefWidth="130.0" text="Schedule" />
+                              <TableColumn fx:id="courseRoomColumn" prefWidth="80.0" text="Room" />
+                              <TableColumn fx:id="courseAvailableSeatsColumn" prefWidth="125.0" text="Available Seats" />
+                           </columns>
+                        </TableView>
+                        <Label fx:id="coursesScoreLabel" layoutX="4.0" layoutY="25.0" text="Courses Score" textFill="BLACK">
+                           <font>
+                              <Font name="Arial Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        
+                        <!-- TableView for Course Grade -->
+                        <TableView fx:id="studentGradesTableView" layoutX="25.0" layoutY="57.0" prefHeight="278.0" prefWidth="834.0" visible="false" AnchorPane.bottomAnchor="240.0" AnchorPane.leftAnchor="4.0" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="57.0">
+                           <columns>
+                              <TableColumn fx:id="gradeCourseIDColumn" prefWidth="165.0" text="Course ID" />
+                              <TableColumn fx:id="gradeSubjectNameColumn" prefWidth="165.0" text="Subject Name" />
+                              <TableColumn fx:id="gradeSemesterColumn" prefWidth="85.0" text="Semester" />
+                              <TableColumn fx:id="gradeAssignmentColumn" prefWidth="83.0" text="Assignment" />
+                              <TableColumn fx:id="gradeMidtermColumn" prefWidth="83.0" text="Midterm" />
+                              <TableColumn fx:id="gradeFinalColumn" prefWidth="83.0" text="Final" />
+                              <TableColumn fx:id="gradeAverageColumn" prefWidth="83.0" text="Average" />
+                              <TableColumn fx:id="gradeLetterColumn" prefWidth="90.0" text="Letter Grade" />
+                           </columns>
+                        </TableView>
+                        
+                        <!-- Label for GPA Summary -->
+                        <Label fx:id="gpaLabel" layoutX="4.0" layoutY="331.0" text="Final Point" textFill="BLACK" visible="false">
+                           <font>
+                              <Font name="Arial Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        
+                        <!-- TableView for GPA Summary -->
+                        <TableView fx:id="gpaSummaryTableView" layoutX="4.0" layoutY="363.0" prefHeight="90.0" prefWidth="837.0" visible="false" AnchorPane.leftAnchor="4.0" AnchorPane.rightAnchor="4.0">
+                           <columns>
+                              <TableColumn fx:id="gpaSemesterColumn" prefWidth="170.0" text="Semester" />
+                              <TableColumn fx:id="gpaCreditsColumn" prefWidth="170.0" text="Total Credits" />
+                              <TableColumn fx:id="gpa4PointColumn" prefWidth="170.0" text="4-Point GPA Scale" />
+                              <TableColumn fx:id="gpa10PointColumn" prefWidth="170.0" text="10-Point Scale" />
+                              <TableColumn fx:id="gpaClassificationColumn" prefWidth="170.0" text="Classification" />
+                           </columns>
+                        </TableView>
+                        
+                        <!-- Registered Course Button -->
+                        <Button fx:id="myRegisteredCoursesButton" layoutX="4.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleMyRegisteredCourses" prefHeight="36.0" prefWidth="202.0" style="-fx-background-color: #4682B4;" text="My Registered Courses" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Button>
+                        
+                        <!-- Search TextField and Button -->
+                        <TextField fx:id="searchField" layoutX="561.0" layoutY="20.0" prefHeight="30.0" prefWidth="190.0" promptText="Search Courses" />
+                        
+                        <!--  onAction="#handleSearch" -->
+                        <Button fx:id="searchButton" layoutX="761.0" layoutY="14.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="80.0" style="-fx-background-color: #4682B4;" text="Search" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Bold" size="14.0" />
+                           </font>
+                        </Button>
+                        
+                        <!-- Register Button -->
+                        <Button layoutY="492.0" mnemonicParsing="false" onAction="#handleRegisterButton" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: #4682B4;" text="Register Course" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Bold" size="16.0" />
+                           </font>
+                        </Button>
+                        
+                        <!-- Export Button -->
+                        <Button fx:id="exportButton" layoutX="695.0" layoutY="491.0" mnemonicParsing="false" onAction="#handleExportPDF" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: #4682B4;" text="Export PDF" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Bold" size="16.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</StackPane>

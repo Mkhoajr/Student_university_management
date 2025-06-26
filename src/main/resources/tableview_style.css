@@ -1,0 +1,56 @@
+/* Toàn bộ vùng tiêu đề bảng */
+.table-view .column-header-background {
+    -fx-background-color: #FFD700;
+}
+
+/* Từng cột trong tiêu đề */
+.table-view .column-header {
+    -fx-background-color: #FFD700;
+}
+
+/* Màu chữ của tiêu đề cột */
+.table-view .column-header .label {
+    -fx-text-fill: black;
+    -fx-font-weight: bold;
+}
+
+/* Màu nền cho các hàng dữ liệu */
+.table-view .table-row-cell {
+    -fx-background-color: white;
+    -fx-border-color: lightgray;
+    -fx-border-width: 0 0 1px 0; /* Đường kẻ dưới mỗi hàng */
+}
+
+/* Màu khi hover vào hàng */
+.table-view .table-row-cell:hover {
+    -fx-background-color: #f0f8ff; /* Màu xanh nhạt */
+}
+
+/* Đường phân cách giữa các ô */
+.table-view .table-cell {
+    -fx-border-color: lightgray;
+    -fx-border-width: 0 1px 0 0; /* Kẻ phải */
+}
+
+/* Khi một hàng được chọn: giữ nền xanh nhạt */
+.table-view .table-row-cell:filled:selected {
+    -fx-background-color: #ADD8E6;
+}
+
+/* Màu chữ đen cho nội dung được chọn */
+.table-view .table-cell:filled:selected .text {
+    -fx-fill: black;
+}
+.table-view .table-cell:filled:selected .label {
+    -fx-text-fill: black;
+}
+
+/* Tắt viền xanh khi focus */
+.table-view:focused {
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+
+
+

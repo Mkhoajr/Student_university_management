@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1100.0" stylesheets="@/tableview_style.css, @/style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.Student_management.controller.AdminController">
+   <children>
+      <BorderPane prefHeight="200.0" prefWidth="200.0">
+         <top>
+            <AnchorPane prefHeight="30.0" prefWidth="1100.0" style="-fx-background-color: #FFD700;" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="14.0" layoutY="2.0" text="Dashboard Form">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  
+                  <!-- Logout Button -->
+                  <Button fx:id="logoutButton" layoutX="1001.0" mnemonicParsing="false" onAction="#handleLogout" prefHeight="29.0" prefWidth="120.0" style="-fx-background-color: #ff6666;" text="Logout" AnchorPane.bottomAnchor="1.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <graphic>
+                        <ImageView fitHeight="19.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/Icon-logout.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </top>
+         
+         <left>
+            <AnchorPane prefHeight="565.0" prefWidth="230.0" style="-fx-background-color: #FFD700;" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane layoutX="15.0" layoutY="14.0" prefHeight="111.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="28.0" layoutY="69.0" text="Welcome, Admin">
+                           <font>
+                              <Font name="Arial Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="55.0" fitWidth="60.0" layoutX="73.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/Icon-admin.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+
+                  <!-- Dashboard Button -->
+                  <Button layoutX="25.0" layoutY="169.0" mnemonicParsing="false" onAction="#handleDashboardButton" prefHeight="40.0" prefWidth="180.0" text="Dashboard">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="30.0" layoutY="174.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/Icon-dashboard.png" />
+                     </image>
+                  </ImageView>
+
+                  <!-- Student Button -->
+                  <Button layoutX="25.0" layoutY="232.0" mnemonicParsing="false" onAction="#handleStudentsButton" prefHeight="40.0" prefWidth="180.0" text=" Students">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="31.0" layoutY="237.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/Icon-student.png" />
+                     </image>
+                  </ImageView>
+
+                  <!-- Teacher Button -->
+                  <Button layoutX="25.0" layoutY="289.0" mnemonicParsing="false" onAction="#handleTeachersButton" prefHeight="40.0" prefWidth="180.0" text=" Teachers">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="30.0" layoutY="294.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/Icon-teacher.png" />
+                     </image>
+                  </ImageView>
+
+                  <!-- Course Button -->
+                  <Button layoutX="25.0" layoutY="352.0" mnemonicParsing="false" onAction="#handleCoursesButton" prefHeight="40.0" prefWidth="180.0" text=" Courses">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="29.0" layoutY="357.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/Icon-course.png" />
+                     </image>
+                  </ImageView>
+
+                  <!-- Subject Button -->
+                  <Button layoutX="25.0" layoutY="412.0" mnemonicParsing="false" onAction="#handleSubjectsButton" prefHeight="40.0" prefWidth="180.0" text=" Subjects">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="29.0" layoutY="417.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/Icon-subject.png" />
+                     </image>
+                  </ImageView>
+
+                  <!-- Send Notification Button -->
+                  <Button onAction="#handleSendNotificationButton" layoutX="25.0" layoutY="469.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="180.0" text="Send Notification">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="26.0" layoutY="474.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/Icon-SendNotification.png" />
+                     </image>
+                  </ImageView>
+
+                  <!-- Lines -->
+                  <Line endX="100.0" layoutX="115.0" layoutY="125.0" startX="-100.0" stroke="#000000ae" style="-fx-stroke-width: 3px;" />
+                  <Line endX="129.0" layoutX="101.0" layoutY="1.0" startX="-100.0" style="-fx-stroke-width: 2px;" />
+               </children>
+            </AnchorPane>
+         </left>
+
+         <center>
+            <AnchorPane prefHeight="200.0" prefWidth="869.0" BorderPane.alignment="CENTER">
+               <children>
+                  <!-- Main Container -->
+                  <AnchorPane layoutX="14.0" layoutY="13.0" prefHeight="545.0" prefWidth="842.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="13.0" AnchorPane.topAnchor="13.0">
+                     <children>
+                     
+	     <!-- DASHBOARD VIEW (hiển thị khi click Dashboard) -->
+	     <AnchorPane fx:id="dashboardView" visible="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+	        <children>
+	           <!-- Statistic Cards -->
+	           <HBox layoutY="0.0" prefHeight="130.0" spacing="20.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+	              <children>
+	                 <AnchorPane fx:id="cardStatistic" minHeight="0.0" minWidth="0.0" prefHeight="138.0" prefWidth="842.0">
+	                    <children>
+	                       <!-- Student Statistic -->                                 
+	                       <AnchorPane layoutY="-1.0" prefHeight="148.0" prefWidth="200.0" style="-fx-background-color: #4CAF50; -fx-background-radius: 10px; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 10, 0, 0, 2);" AnchorPane.bottomAnchor="-9.0" AnchorPane.topAnchor="-1.0">
+	                          <children>
+	                             <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="20.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+	                                <image>
+	                                   <Image url="@images/Icon-student.png" />
+	                                </image>
+	                             </ImageView>
+	                             <Label layoutX="20.0" layoutY="60.0" text="Total Students" textFill="WHITE">
+	                                <font>
+	                                   <Font name="Arial Bold" size="18.0" />
+	                                </font>
+	                             </Label>
+	                             <Label fx:id="totalStudentsLabel" layoutX="20.0" layoutY="80.0" textFill="WHITE">
+	                                <font>
+	                                   <Font name="Arial Bold" size="28.0" />
+	                                </font>
+	                             </Label>
+	                          </children>
+	                       </AnchorPane>
+	                       
+	                       <!-- Teacher Statistic -->   
+	                       <AnchorPane layoutX="321.0" layoutY="-1.0" prefHeight="149.0" prefWidth="200.0" style="-fx-background-color: #2196F3; -fx-background-radius: 10px; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 10, 0, 0, 2);" AnchorPane.bottomAnchor="-10.0" AnchorPane.leftAnchor="321.0" AnchorPane.rightAnchor="321.0" AnchorPane.topAnchor="-1.0">
+	                          <children>
+	                             <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="20.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+	                                <image>
+	                                   <Image url="@images/Icon-teacher.png" />
+	                                </image>
+	                             </ImageView>
+	                             <Label layoutX="20.0" layoutY="63.0" text="Total Teachers" textFill="WHITE">
+	                                <font>
+	                                   <Font name="Arial Bold" size="18.0" />
+	                                </font>
+	                             </Label>
+	                             <Label fx:id="totalTeachersLabel" layoutX="20.0" layoutY="80.0" textFill="WHITE">
+	                                <font>
+	                                   <Font name="Arial Bold" size="28.0" />
+	                                </font>
+	                             </Label>
+	                          </children>
+	                       </AnchorPane>
+	                       
+	                       <!-- Department Statistic -->
+	                       <AnchorPane layoutX="642.0" layoutY="-2.0" prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: #9C27B0; -fx-background-radius: 10px; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 10, 0, 0, 2);" AnchorPane.bottomAnchor="-10.0" AnchorPane.leftAnchor="642.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-2.0">
+	                          <children>
+	                             <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="20.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+	                                <image>
+	                                   <Image url="@images/Icon-dashboard.png" />
+	                                </image>
+	                             </ImageView>
+	                             <Label layoutX="20.0" layoutY="60.0" text="Total Departments" textFill="WHITE">
+	                                <font>
+	                                   <Font name="Arial Bold" size="18.0" />
+	                                </font>
+	                             </Label>
+	                             <Label fx:id="totalDepartmentsLabel" layoutX="20.0" layoutY="80.0" textFill="WHITE">
+	                                <font>
+	                                   <Font name="Arial Bold" size="28.0" />
+	                                </font>
+	                             </Label>
+	                          </children>
+	                       </AnchorPane>
+	                    </children>
+	                 </AnchorPane>
+	              </children>
+	           </HBox>
+                              
+                     <!-- Charts Container -->
+                     <HBox layoutY="150.0" spacing="25.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="150.0">
+                        <children>
+                           <!-- Bar Chart -->
+                           <AnchorPane fx:id="barChart" prefHeight="378.0" prefWidth="408.0" style="-fx-border-color: #000000;">
+                              <children>
+                                 <BarChart fx:id="studentPerDepartmentChart" prefHeight="378.0" prefWidth="408.0" style="-fx-bar-gap: 2px;-fx-bar-padding: 1px;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <xAxis>
+                                       <CategoryAxis label="Department" side="BOTTOM" />
+                                    </xAxis>
+                                    <yAxis>
+                                       <NumberAxis label="Number of Students" side="LEFT" />
+                                    </yAxis>
+                                 </BarChart>
+                              </children>
+                           </AnchorPane>
+                           
+                           <!-- Pie Chart -->
+                           <AnchorPane fx:id="pieChart" prefHeight="378.0" prefWidth="409.0" style="-fx-border-color: #000000;">
+                              <children>
+                                 <PieChart fx:id="userRolePieChart" prefHeight="378.0" prefWidth="409.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                              </children>
+                           </AnchorPane>
+                        </children>
+                     </HBox>
+                  </children>
+               </AnchorPane>
+
+               <!-- TABLE VIEWS (hiển thị khi click các button khác) -->
+               <AnchorPane fx:id="tableViewContainer" visible="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <children>
+                     <!-- Search Field -->
+                     <TextField fx:id="searchField" layoutX="14.0" layoutY="17.0" prefWidth="300.0" promptText="Search by Name or ID..." visible="false" />
+                     <!-- Search Button -->
+                     <Button fx:id="searchButton" layoutX="320.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleSearch" style="-fx-background-color: #FFD700;" text="Search" visible="false">
+                        <font>
+                           <Font name="Arial Bold" size="12.0" />
+                        </font>
+                     </Button>
+
+                     <!-- TableView cho Students -->
+                     <TableView fx:id="studentTableView" layoutX="14.0" layoutY="50.0" prefHeight="429.0" prefWidth="814.0" visible="false" AnchorPane.bottomAnchor="66.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0">
+                        <columns>
+                           <TableColumn fx:id="studentIDColumn" prefWidth="130.0" text="Student ID" />
+                           <TableColumn fx:id="studentNameColumn" prefWidth="140.0" text="Student Name" />
+                           <TableColumn fx:id="studentDOBColumn" prefWidth="140.0" text="Day of Birth" />
+                           <TableColumn fx:id="studentGenderColumn" prefWidth="130.0" text="Gender" />
+                           <TableColumn fx:id="studentDepartmentColumn" prefWidth="145.0" text="Department" />
+                           <TableColumn fx:id="studentEnrollColumn" prefWidth="130.0" text="Enrollment Date" />
+                        </columns>
+                     </TableView>
+
+                     <!-- TableView cho Teachers -->
+                     <TableView fx:id="teacherTableView" layoutX="14.0" layoutY="50.0" prefHeight="429.0" prefWidth="814.0" visible="false" AnchorPane.bottomAnchor="66.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0">
+                        <columns>
+                           <TableColumn fx:id="teacherIDColumn" prefWidth="125.0" text="Teacher ID" />
+                           <TableColumn fx:id="teacherNameColumn" prefWidth="140.0" text="Teacher Name" />
+                           <TableColumn fx:id="teacherDOBColumn" prefWidth="140.0" text="Day of Birth" />
+                           <TableColumn fx:id="teacherGenderColumn" prefWidth="125.0" text="Gender" />
+                           <TableColumn fx:id="teacherDepartmentColumn" prefWidth="140.0" text="Department" />
+                           <TableColumn fx:id="teacherHireColumn" prefWidth="145.0" text="Hire Date" />
+                        </columns>
+                     </TableView>
+
+                     <!-- TableView cho Courses -->
+                     <TableView fx:id="courseTableView" layoutX="14.0" layoutY="50.0" prefHeight="429.0" prefWidth="814.0" visible="false" AnchorPane.bottomAnchor="66.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0">
+                        <columns>
+                           <TableColumn fx:id="courseIDColumn" prefWidth="164.0" text="Course ID" />
+                           <TableColumn fx:id="courseSubjectNameColumn" prefWidth="154.0" text="Subject Name" />
+                           <TableColumn fx:id="courseTeacherNameColumn" prefWidth="140.0" text="Teacher Name" />
+                           <TableColumn fx:id="courseSemesterColumn" prefWidth="70.0" text="Semester" />
+                           <TableColumn fx:id="courseScheduleColumn" prefWidth="120.0" text="Schedule" />
+                           <TableColumn fx:id="courseRoomColumn" prefWidth="83.0" text="Room" />
+                           <TableColumn fx:id="courseMaxStudentColumn" prefWidth="83.0" text="Max Student" />
+                        </columns>
+                     </TableView>
+
+                     <!-- TableView cho Subjects -->
+                     <TableView fx:id="subjectTableView" layoutX="14.0" layoutY="50.0" prefHeight="429.0" prefWidth="814.0" visible="false" AnchorPane.bottomAnchor="66.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0">
+                        <columns>
+                           <TableColumn fx:id="subjectIDColumn" prefWidth="150.0" text="Subject ID" />
+                           <TableColumn fx:id="subjectNameColumn" prefWidth="350.0" text="Subject Name" />
+                           <TableColumn fx:id="subjectCreditColumn" prefWidth="315.0" text="Credit" />
+                        </columns>
+                     </TableView>
+
+                     <!-- Action Buttons -->
+                     <Button fx:id="addButton" layoutX="588.0" layoutY="495.0" mnemonicParsing="false" onAction="#handleAddButton" prefHeight="40.0" prefWidth="110.0" style="-fx-background-color: #FFD700;" text="Add" visible="false" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="144.0">
+                        <font>
+                           <Font name="Arial Bold" size="16.0" />
+                        </font>
+                     </Button>
+                     
+                     <Button fx:id="deleteButton" layoutX="718.0" layoutY="495.0" mnemonicParsing="false" onAction="#handleDeleteButton" prefHeight="40.0" prefWidth="110.0" style="-fx-background-color: #FFD700;" text="Delete" visible="false" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="14.0">
+                        <font>
+                           <Font name="Arial Bold" size="16.0" />
+                        </font>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</StackPane>

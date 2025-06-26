@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="450.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.Student_management.controller.FormAddSubjectController">
+   <children>
+      <AnchorPane layoutX="133.0" layoutY="80.0" prefHeight="450.0" prefWidth="676.0" style="-fx-background-color: #FFEB99;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane layoutX="44.0" layoutY="25.0" prefHeight="402.0" prefWidth="552.0"> 
+               <children>
+                  <Label layoutX="54.0" layoutY="14.0" text="Subject Information">
+                     <font>
+                        <Font name="Arial Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="58.0" layoutY="67.0" text="Subject ID">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </Label>
+                     
+                  <!-- Subject ID -->
+                  <TextField fx:id="subjectIDField" layoutX="169.0" layoutY="63.0" prefHeight="25.0" prefWidth="156.0" />
+                  <Label layoutX="58.0" layoutY="105.0" text="Subject Name">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </Label> 
+                  
+                  <TextField fx:id="subjectNameField" layoutX="169.0" layoutY="101.0" prefHeight="25.0" prefWidth="156.0" />
+                  <Label layoutX="58.0" layoutY="150.0" text="Credit">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  
+                  <!-- Subject Credit -->
+                  <ComboBox fx:id="subjectCreditComboBox" layoutX="168.0" layoutY="146.0" prefHeight="25.0" prefWidth="156.0" promptText="Choose..." style="-fx-background-color: #FFD700;" />
+                     
+                   <!-- Update Button -->
+                  <Button onAction="#handleUpdateButton" layoutX="324.0" layoutY="298.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="100.0" style="-fx-background-color: #FFD700;" text="Update">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </Button>
+                 
+                             
+                  <!-- Add Button -->
+                  <Button fx:id="btnAddForClose" onAction="#handleAddSubject" layoutX="168.0" layoutY="298.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="100.0" style="-fx-background-color: #FFD700;" text="Add">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  
+                     <ImageView fitHeight="134.0" fitWidth="136.0" layoutX="427.0" layoutY="46.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/Icon-course.png" />
+                     </image>
+                  </ImageView>
+               
+            </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="350.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.Student_management.controller.FormStudentGradingController">
+   <children>
+      <AnchorPane layoutX="0.0" layoutY="0.0" prefHeight="350.0" prefWidth="500.0" style="-fx-background-color: #FFEB99;">
+         <children>
+            <Label layoutX="140.0" layoutY="10.0" text="Student Grade Entry Form">
+               <font>
+                  <Font name="Arial Bold" size="18.0" />
+               </font>
+            </Label>
+
+            <!-- Course -->
+            <Label layoutX="40.0" layoutY="50.0" text="Course">
+               <font>
+                  <Font name="Arial Bold" size="16.0" />
+               </font></Label>
+            <ComboBox fx:id="courseComboBox" layoutX="140.0" layoutY="46.0" prefWidth="200.0" promptText="Select course" style="-fx-background-color: #FFD700;" />
+
+            <!-- Student -->
+            <Label layoutX="40.0" layoutY="85.0" text="Student">
+               <font>
+                  <Font name="Arial Bold" size="16.0" />
+               </font></Label>
+            <ComboBox fx:id="studentComboBox" layoutX="140.0" layoutY="81.0" prefWidth="200.0" promptText="Select student" style="-fx-background-color: #FFD700;" />
+
+            <!-- Assignment -->
+            <Label layoutX="40.0" layoutY="120.0" text="Assignment">
+               <font>
+                  <Font name="Arial Bold" size="16.0" />
+               </font></Label>
+            <TextField fx:id="assignmentTextField" layoutX="140.0" layoutY="116.0" prefWidth="100.0" promptText="0.0 - 10.0" />
+
+            <!-- Midterm -->
+            <Label layoutX="40.0" layoutY="155.0" text="Midterm">
+               <font>
+                  <Font name="Arial Bold" size="16.0" />
+               </font></Label>
+            <TextField fx:id="midtermTextField" layoutX="140.0" layoutY="151.0" prefWidth="100.0" promptText="0.0 - 10.0" />
+
+            <!-- Final -->
+            <Label layoutX="40.0" layoutY="190.0" text="Final">
+               <font>
+                  <Font name="Arial Bold" size="16.0" />
+               </font></Label>
+            <TextField fx:id="finalTextField" layoutX="140.0" layoutY="186.0" prefWidth="100.0" promptText="0.0 - 10.0" />
+
+            <!-- Buttons -->
+            <!--  -->
+            <Button fx:id="saveButton" onAction="#handleSaveButton" layoutX="140.0" layoutY="240.0" prefHeight="33.0" prefWidth="80.0" style="-fx-background-color: #FFD700;" text="Save">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></Button>
+            
+            <!-- onAction="#handleCancel"-->
+            <Button fx:id="cancelButton" onAction="#handleCancelButton" layoutX="240.0" layoutY="240.0" prefHeight="33.0" prefWidth="80.0" style="-fx-background-color: #FFD700;" text="Cancel">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font></Button>
+
+            <!-- Optional icon -->
+            <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="420.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/Icon-grade.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

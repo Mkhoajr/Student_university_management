@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="450.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.Student_management.controller.FormAddStudentController">
+   <children>
+      <AnchorPane layoutX="133.0" layoutY="80.0" prefHeight="450.0" prefWidth="650.0" style="-fx-background-color: #FFEB99;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane layoutX="13.0" layoutY="17.0" prefHeight="417.0" prefWidth="624.0"> 
+               <children>
+                  <Label layoutX="50.0" layoutY="3.0" text="Student Information">
+                     <font>
+                        <Font name="Arial Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="53.0" layoutY="164.0" text="Student ID">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font></Label>
+                     
+                  <!-- Student User ID -->
+                  <TextField fx:id="studentUserIDField" layoutX="168.0" layoutY="38.0" prefHeight="25.0" prefWidth="149.0" />
+                  
+                  <!-- Student User Name -->
+                  <TextField fx:id="studentUserNameField" layoutX="169.0" layoutY="80.0" prefHeight="25.0" prefWidth="149.0" />
+                   
+                  <!-- Student Password -->
+                  <TextField fx:id="studentPasswordField" layoutX="169.0" layoutY="122.0" prefHeight="25.0" prefWidth="149.0" />
+                  
+                  <!-- Student ID -->
+                  <TextField fx:id="studentIDField" layoutX="168.0" layoutY="159.0" prefHeight="25.0" prefWidth="149.0" />
+                 
+                  <Label layoutX="54.0" layoutY="200.0" text="Full Name">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font></Label>
+                    
+                  <!-- Student Name -->
+                  <TextField fx:id="studentNameField" layoutX="168.0" layoutY="196.0" />
+                  
+                  <!-- Student Date of birth -->
+                  <DatePicker fx:id="studentBirthdayPicker" layoutX="168.0" layoutY="237.0" prefHeight="25.0" prefWidth="149.0" />
+                 
+                  <!-- Student Gender -->
+                  <ComboBox fx:id="studentGenderComboBox" layoutX="168.0" layoutY="281.0" prefWidth="150.0" promptText="Choose..." style="-fx-background-color: #FFD700;" />
+                  
+                  <!-- Student Department -->
+                  <ComboBox fx:id="studentDepartmentComboBox" layoutX="168.0" layoutY="324.0" prefWidth="150.0" promptText="Choose..." style="-fx-background-color: #FFD700;" /> 
+                  
+                  <!-- Student Image -->
+                  <AnchorPane layoutX="470.0" layoutY="12.0" prefHeight="128.0" prefWidth="126.0" style="-fx-border-color: #000000;">
+                     <children>
+                        <ImageView fx:id="studentImageView" fitHeight="155.0" fitWidth="140.0" layoutX="2.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                  </AnchorPane>
+                  
+                  <!-- Import Button -->
+                  <Button fx:id="btnImportStudentImage" layoutX="492.0" layoutY="189.0" mnemonicParsing="false" onAction="#handleImportButton" prefHeight="40.0" prefWidth="100.0" style="-fx-background-color: #FFD700;" text="Import">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font></Button>
+                     
+                     <!-- Add Button -->
+                  <Button onAction="#handleAddStudent" layoutX="203.0" layoutY="369.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="100.0" style="-fx-background-color: #FFD700;" text="Add">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font></Button>
+                     
+                     <!-- Update Button -->
+                  <Button fx:id="updateButton" onAction="#handleUpdateButton" layoutX="338.0" layoutY="369.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="100.0" style="-fx-background-color: #FFD700;" text="Update">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font></Button>
+                 
+                  <Label layoutX="54.0" layoutY="241.0" text="Birth Date">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font></Label>
+                  <Label layoutX="54.0" layoutY="285.0" text="Gender">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font></Label>
+                  <Label layoutX="54.0" layoutY="329.0" text="Department">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="54.0" layoutY="43.0" text="User ID">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="54.0" layoutY="126.0" text="Password">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="54.0" layoutY="85.0" text="User Name">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </Label>
+                                    
+                  
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

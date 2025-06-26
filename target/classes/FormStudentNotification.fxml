@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<!-- stylesheets="@/teacherstudentnotification.css" -->
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" styleClass="notification-view-form" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.Student_management.controller.FormStudentNotificationController">
+   
+   <TabPane layoutX="14.0" layoutY="14.0" prefHeight="572.0" prefWidth="872.0" tabClosingPolicy="UNAVAILABLE">
+      
+      <!-- Tab 1: Inbox -->
+      <Tab text="Inbox">
+         <AnchorPane>
+            <!-- Header -->
+            <Label layoutX="50.0" layoutY="14.0" styleClass="form-title" text="Notification from Admin">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            
+            <!-- Messages List -->
+            <TableView fx:id="messageTable" layoutX="50.0" layoutY="50.0" prefHeight="250.0" prefWidth="750.0" styleClass="message-table">
+               <columns>
+                  <TableColumn fx:id="titleColumn" prefWidth="283.5" text="Title" />
+                  <TableColumn fx:id="dateColumn" prefWidth="163.0" text="Date" />
+                  <TableColumn fx:id="timeColumn" prefWidth="140.0" text="Time" />
+                  <TableColumn fx:id="senderColumn" prefWidth="162.5" text="From Admin" />
+               </columns>
+            </TableView>
+            
+            <!-- Message Details Panel -->
+            <Label layoutX="50.0" layoutY="349.0" prefHeight="25.0" prefWidth="154.0" styleClass="form-label" text="Notification Detail">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            
+            <!-- Date/Time Label -->
+            <Label fx:id="tab1DetailDateLabel" layoutX="210.0" layoutY="352.0" styleClass="detail-value" text="Date/Time">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            
+            <!-- Message Content -->
+            <Label layoutX="50.0" layoutY="375.0" styleClass="form-label" text="Content:">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            
+            <ScrollPane layoutX="50.0" layoutY="395.0" prefHeight="120.0" prefWidth="600.0" styleClass="message-scroll">
+               <TextArea fx:id="messageContentArea" editable="false" prefHeight="119.0" prefWidth="585.0" styleClass="message-content" wrapText="true" />
+            </ScrollPane>
+            
+            <!-- Delete Receive Button -->
+            <Button fx:id="deleteBtn" layoutX="680.0" layoutY="487.0" prefWidth="120.0" styleClass="delete-button" text="Delete">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Button>
+            
+            <!-- Clear Button in Tab1-->
+            <Button fx:id="clearBtnTab1" layoutX="680.0" layoutY="445.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="120.0" text="Clear">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Button>
+         </AnchorPane>
+      </Tab>
+
+      <!-- Tab 2: Send Message to Admin -->
+      <Tab text="Send message to Admin">
+         <AnchorPane>
+            <!-- Header -->
+            <Label layoutX="45.0" layoutY="14.0" styleClass="form-title" text="Send Message To Admin">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+
+            <!-- Left Panel - Compose Message -->
+            <AnchorPane layoutX="28.0" layoutY="50.0" prefHeight="296.0" prefWidth="400.0" styleClass="compose-panel">
+
+               <!-- Subject -->
+               <Label layoutX="20.0" layoutY="5.0" styleClass="form-label" text="Title:">
+                  <font>
+                     <Font name="System Bold" size="14.0" />
+                  </font>
+               </Label>
+               <TextField fx:id="subjectField" layoutX="20.0" layoutY="25.0" prefWidth="360.0" promptText="Nhập tiêu đề tin nhắn" styleClass="form-textfield" />
+
+               <!-- Message Content -->
+               <Label layoutX="20.0" layoutY="65.0" styleClass="form-label" text="Content">
+                  <font>
+                     <Font name="System Bold" size="14.0" />
+                  </font>
+               </Label>
+               <TextArea fx:id="composeMessageArea" layoutX="20.0" layoutY="85.0" prefHeight="80.0" prefWidth="360.0" promptText="Nhập nội dung tin nhắn..." styleClass="form-textarea" wrapText="true" />
+
+               <!-- Send Buttons -->
+               <Button fx:id="sendToAdminBtn" layoutX="20.0" layoutY="175.0" prefHeight="30.0" prefWidth="80.0" styleClass="send-button" text="Send">
+                  <font>
+                     <Font size="13.0" />
+                  </font>
+               </Button>
+               <Button fx:id="clearFormBtn" layoutX="113.0" layoutY="175.0" prefHeight="30.0" prefWidth="80.0" styleClass="clear-button" text="Clear Form">
+                  <font>
+                     <Font size="13.0" />
+                  </font>
+               </Button>
+            </AnchorPane>
+
+            <!-- Right Panel - Sent Messages History -->
+            <AnchorPane layoutX="470.0" layoutY="33.0" prefHeight="258.0" prefWidth="380.0" styleClass="sent-panel">
+               
+               <Label layoutX="6.0" layoutY="10.0" styleClass="form-title" text="Sent Messages History">
+                  <font>
+                     <Font name="System Bold" size="16.0" />
+                  </font>
+               </Label>
+
+               <!-- Sent Messages Table -->
+               <TableView fx:id="sentMessagesTable" layoutX="5.0" layoutY="42.0" prefHeight="206.0" prefWidth="371.0" styleClass="message-table">
+                  <columns>
+                     <TableColumn fx:id="sentSubjectColumn" prefWidth="184.5" text="Title" />
+                     <TableColumn fx:id="sentDateColumn" prefWidth="95.5" text="Date " />
+                     <TableColumn fx:id="sentTimeColumn" prefWidth="90.0" text="Time" />
+                  </columns>
+               </TableView>
+            </AnchorPane>
+            
+            <!-- Message Details Panel -->
+            <Label layoutX="476.0" layoutY="293.0" prefHeight="25.0" prefWidth="154.0" styleClass="form-label" text="Notification Detail">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            
+            <!-- Date/Time Label -->
+            <Label fx:id="tab2DetailDateLabel" layoutX="630.0" layoutY="297.0" text="Date/Time">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            
+            <!-- Message Content -->
+            <Label layoutX="476.0" layoutY="319.0" styleClass="form-label" text="Content">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            
+            <ScrollPane layoutX="475.0" layoutY="344.0" prefHeight="156.0" prefWidth="375.0" styleClass="message-scroll">
+               <content>
+                  <TextArea fx:id="messageSendContentArea" editable="false" prefHeight="156.0" prefWidth="374.0" styleClass="message-content" wrapText="true" />
+               </content>
+            </ScrollPane>
+            
+            <!-- Delete Send Message Button -->
+            <Button fx:id="deleteSentBtn" layoutX="750.0" layoutY="513.0" prefHeight="25.0" prefWidth="100.0" text="Delete" />
+            
+            <!-- Clear Button in Tab 2-->
+            <Button fx:id="clearBtnTab2" layoutX="640.0" layoutY="512.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="100.0" text="Clear" />
+            
+         </AnchorPane>
+      </Tab>
+   </TabPane>
+</AnchorPane>
