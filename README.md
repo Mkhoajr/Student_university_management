@@ -42,10 +42,13 @@ _ Apache POI (For exporting to Excel)
 _ iText7 (For exporting to PDF)  
 _ Socket programming  
 
+## Database  
+<img src="https://github.com/user-attachments/assets/ffe444cf-800c-4aee-88be-e99e44171e38" width="600" alt="Database" />
+
 
 ## Project Structure  
 
-![Screenshot 2025-06-26 212248](https://github.com/user-attachments/assets/3033aed8-bfd8-49e7-a08a-62f62de586be)  
+<img src="https://github.com/user-attachments/assets/3033aed8-bfd8-49e7-a08a-62f62de586be" width="600" alt="Project structure" />
 
 ### Explanation of Key Packages:
 
@@ -71,14 +74,16 @@ _ Socket programming
 - **`pom.xml`**: Defines project dependencies, plugins, and build lifecycle using Maven.
 - **JRE System Library [JavaSE-1.8] & Maven Dependencies**: Provides Java standard libraries and external libraries like JavaFX, Hibernate, JavaMail, etc.
 
-### Screenshots  
+### UI Screenshots  
 
 <figure>
   <img src="https://github.com/user-attachments/assets/8c616cf8-71a1-4d80-a4b6-1107610eb388" width="600" alt="Login Form" />
 </figure>  
-<figure>
+
+<figure>  
   <img src="https://github.com/user-attachments/assets/6a79c828-096d-43b9-9518-827d28772b9c" width="600" alt="Forget Pass Form" />
 </figure>  
+
 <figure>
   <img src="https://github.com/user-attachments/assets/b5e471dd-a460-4ee9-8a47-769589888397" width="600" alt="Verify Pass Form" />
 </figure>  
