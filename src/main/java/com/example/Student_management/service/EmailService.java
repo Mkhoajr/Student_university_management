@@ -16,8 +16,8 @@ public class EmailService {
 		// Send Email Belong to OTP
 		// smtp : simple mail transfer protocol
 	
-        final String fromEmail = "studentmanagement.otp@gmail.com";
-        final String password = "emlo bmki gbae zkem";
+        final String fromEmail = "";
+        final String password = "";
 
         public boolean sendOtpEmail(String toEmail, String otp) {
             Properties props = new Properties();
